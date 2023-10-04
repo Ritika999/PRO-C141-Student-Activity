@@ -5,6 +5,13 @@ movies_data = pd.read_csv('final.csv')
 
 app = Flask(__name__)
 
+all_movies = movies_data[["original_title","poster_link","release_date","runtime","weighted_rating"]]
+
+liked_movies = []
+not_liked_movies = []
+did_not_watch = []
+
+
 # extracting important information from dataframe
 
 
